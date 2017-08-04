@@ -19,16 +19,17 @@ app.use(morgan('combined'));
                 This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.
                </p>`
  };
-function createTemplate(data) {
+ 
+    function createTemplate (data) {
     var title = data.title;
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
     
-var htmlTemplate =
-
- <html>
-     <head>
+     var htmlTemplate= `
+     
+      <html>
+       <head>
         <title>
             ${title}
              </title>
@@ -55,9 +56,8 @@ var htmlTemplate =
                </div>
             </div>  
         </body>
-    
 </html>
-;
+    `  ;
   return htmlTemplate;
 }
 app.get('/', function (req, res) {
