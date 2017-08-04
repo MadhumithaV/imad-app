@@ -19,7 +19,7 @@ app.use(morgan('combined'));
                 This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.
                </p>`
  };
-function createTemplate(data){
+function createTemplate(data) {
     var title = data.title;
     var date = data.date;
     var heading = data.heading;
