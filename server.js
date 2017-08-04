@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
  var ArticleOne={
      title:'Article one|Madhumitha V',
-     heading:'Article One',
+     heading:'Article one',
      date:'Aug 4,2017',
      content:  `           <p>
                 This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.
@@ -31,8 +31,7 @@ var htmlTemplate =
      <head>
         <title>
             ${title}
-            
-        </title>
+             </title>
        <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <link href="/ui/style.css" rel="stylesheet" />
       
@@ -59,7 +58,7 @@ var htmlTemplate =
     
 </html>
 ;
-return htmlTemplate;
+  return htmlTemplate;
 }
 app.get('/', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui' , 'index.html'));
