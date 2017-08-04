@@ -21,7 +21,7 @@ app.use(morgan('combined'));
                 This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.
                </p>`
  },
-  articleTwo:{
+    articleTwo:{
      title:'Article two|Madhumitha V',
      heading:'Article two',
      date:'Aug 4,2017',
@@ -29,7 +29,7 @@ app.use(morgan('combined'));
                 This is my second content.
              </p>  `
  },
-  articleThree:{
+     articleThree:{
      title:'Article three|Madhumitha V',
      heading:'Article three',
      date:'Aug 4,2017',
@@ -83,17 +83,11 @@ app.get('/', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui' , 'index.html'));
 });
 
-app.get('/article-one',function(req,res){
-   res.send(createTemplate(articleOne));
+app.get('/:articleName',function(req,res){
+    var articleName=req.params.articleName;
+   res.send(createTemplate(articles[articleName]));
 });
-app.get('/article-two',function(req,res){ 
-   res.sendFile(path.join(__dirname, 'ui' , 'article-two.html')); 
 
-});
-app.get('/article-three',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui' , 'article-three.html'));
-
-});
 
 
 app.get('/ui/style.css', function (req, res) {
