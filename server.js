@@ -22,40 +22,6 @@ app.use(session({
     cookie:{maxAge:1000*60*60*30}
 }));
 
- var articles = {
-     
-    'article-one': {
-     title:'Article one|Madhumitha V',
-     heading:'Article one',
-     date:'Aug 4,2017',
-     content:  `           <p>
-                This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.
-             </p>  
-                <p>
-                 This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.
-                </p>
-                <p>
-                This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.This is my first content.
-               </p>`
- },
-     'article-two':{
-     title:'Article two|Madhumitha V',
-     heading:'Article two',
-     date:'Aug 4,2017',
-     content:  `           <p>
-                This is my second content.
-             </p>  `
- },
-      'article-three':{
-     title:'Article three|Madhumitha V',
-     heading:'Article three',
-     date:'Aug 4,2017',
-     content:  ` <p>
-                This is my third content.
-                 </p>` 
-  }
-               
- };
     function createTemplate (data) {
     var title = data.title;
     var date = data.date;
