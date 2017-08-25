@@ -93,7 +93,7 @@ res.sendFile(path.join(__dirname, 'ui' , 'index.html'));
 });
 
 function hash(input,salt){
-    var hashed=crypto.pbkdf2sync(input,salt,10000,512,'sha512');
+    var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
     return hashed.toString('hex');
 }
 
