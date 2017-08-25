@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 
-var.config={
+var config={
     user:'meetuaviation',
     database:'meetuaviation',
     host:'db.imad.hasura-app.io',
